@@ -1,0 +1,26 @@
+nav{
+    .container-fluid{
+        .search-container{
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            .suggestions-container{
+                .suggestions{
+                    background-color: white;
+                    position: absolute;
+                    width: 100%;
+                    border: 1px solid #cac8c8;
+                    border-radius: 3px;
+                    padding-left:15px;
+                    li{
+                        list-style: none;
+                        padding:5px;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}

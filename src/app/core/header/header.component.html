@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand"  [routerLink]="['/']" >Angular KT </a>
+      <a class="navbar-brand"   routerLink="/" >Home </a>
+      <a class="navbar-brand" routerLink="/about">About Us</a>
+
+      <!-- <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+  
+      <div class=" navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+
+        <form class="search-container d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [formControl]="searchField"> 
+          <div class="suggestions-container">
+            <h2 class="text-white" *ngIf="loading" >Loading...</h2>
+            <ul class="suggestions" *ngIf="suggestionList">
+              <li *ngFor="let suggestions of suggestionList | async">{{suggestions.suggest}}</li>
+            </ul>
+          </div>
+
+        </form>
+        
+      </div>
+    </div>
+  </nav>
