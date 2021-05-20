@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class SearchService {
-  apiUrlEnpoint: String = "https://5madgy2pye.execute-api.ap-south-1.amazonaws.com/catalog/search/suggestion";
+  apiUrlEnpoint: String = "https://6kggw0es87.execute-api.ap-south-1.amazonaws.com/stage/search/suggestion";
   results;
   loading:boolean;
 
@@ -16,7 +16,7 @@ export class SearchService {
 
 
   getSuggestion(text:String){
-      let apiUrl= `${this.apiUrlEnpoint}?lang=en&text=${text}&size=10`
+      let apiUrl= `${this.apiUrlEnpoint}?countryCode=in&lang=en&text=${text}&size=10`
       return  this.http.get(apiUrl)
 
   }
